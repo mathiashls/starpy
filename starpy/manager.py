@@ -716,7 +716,7 @@ class AMIProtocol(basic.LineOnlyReceiver):
     def originate(
             self, channel, context=None, exten=None, priority=None,
             timeout=None, callerid=None, account=None, application=None,
-            data=None, variable={}, async=False, channelid=None,
+            data=None, variable={}, asynchronous=False, channelid=None,
             otherchannelid=None):
         """Originate call to connect channel to given context/exten/priority
 
@@ -742,7 +742,7 @@ class AMIProtocol(basic.LineOnlyReceiver):
             ('account', account),
             ('application', application),
             ('data', data),
-            ('async', str(async)),
+            ('async', str(asynchronous)),
             ('channelid', channelid),
             ('otherchannelid', otherchannelid),
         ) if v is not None]
